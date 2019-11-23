@@ -18,5 +18,82 @@ This exemplary set-up will cause that ACO and GA are executed for TSP problems w
 
 
 GRAPH COLOURING:
+#### Problem Description
 
-TODO EXPLAIN how to execute this shit.
+Graph coloring is a way of coloring the vertices  of a graph such that no two
+adjacent vertices are of the same color and the number of colors k is minimized
+
+## Approaches
+
+### GA
+
+For genetic algorithms, we use different parameter settings such as:
+* population size
+* number of generations
+* mutation rate
+* tournament size (for selection of parents)
+
+Initial state is a random state.
+
+Fitness function:
+* Graph coloring: 50 * num_of_colors + 100 * num_of_conflicts
+
+## Setup and running
+
+This project uses python 3.7, so you need to have it installed in order
+to run the scripts.
+You can find latest python releases here: https://www.python.org/downloads/
+
+
+In order to install needed packages, run:
+
+```bash
+pip install -r requirements.txt
+```
+
+Everything is run from the main directory (Self-Organising_Systems_Exercise1_GraphColoring), so in order to run the scripts do:
+
+```bash
+$ EXPORT PYTHONPATH=.
+$ python usecases/genetic_algorithms/genetic_algorithms.py -p graph_coloring -i 0010 -r 10
+$ python usecases/ant_colony_optimizations/aco.py -p graph_coloring -i 0010 -r 10
+```
+
+This will run the graph_coloring on the instance 0010, and will repeat for 10 times. 
+
+
+In order to try/add new parameters for GA, just modify the TESTING_PARAMETERS variable,
+which looks something like this:
+
+```
+TESTING_PARAMETERS = [{
+        'POPULATION_SIZE': 50,
+        'NUMBER_OF_GENERATIONS': 200,
+        'MUTATION_RATE': 0.05,
+        'TOURNAMENT_SIZE': 10
+    }]
+```
+
+Same setting is available for ACO-s as well, where parameters can be changed on:
+
+```
+TESTING_PARAMETERS = [{
+        'ANT_COUNT': 200,
+        'GENERATIONS': 100,
+        'ALPHA': 0.5,
+        'BETA': 8.0,
+        'RHO': 0.5,
+        'Q': 10,
+        'STRATEGY': 1,
+    }]
+```
+
+
+Running the script will save all results as xlsx files under `experiments` directory, with
+the following naming convention (depending on what you run):
+
+```
+genetic_algorithm_graph_coloring_{current timestamp}.xlsx, or
+aco_graph_coloring_{current timestamp}.xlsx
+```
+
