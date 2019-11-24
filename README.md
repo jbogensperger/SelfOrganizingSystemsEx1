@@ -1,6 +1,6 @@
 Self Oranizing Systems Exercise 1
 
-The folders TSP and "XXXXX" TODO INSERT FOLDER NAME
+The folders TSP and GC
 each contain a python project which demonstrate the behaviour and performance of Genetic Algorithms (GA) and Ant Colony OptimizationA(ACO) on the given Problems.
 
 
@@ -18,13 +18,6 @@ This exemplary set-up will cause that ACO and GA are executed for TSP problems w
 
 
 GRAPH COLOURING:
-#### Problem Description
-
-Graph coloring is a way of coloring the vertices  of a graph such that no two
-adjacent vertices are of the same color and the number of colors k is minimized
-
-## Approaches
-
 ### GA
 
 For genetic algorithms, we use different parameter settings such as:
