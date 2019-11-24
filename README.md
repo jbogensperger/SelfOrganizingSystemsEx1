@@ -4,7 +4,7 @@ The folders TSP and GC
 each contain a python project which demonstrate the behaviour and performance of Genetic Algorithms (GA) and Ant Colony OptimizationA(ACO) on the given Problems.
 
 
-TSP:
+### TSP
 The main.py scripts can be executed without any further parameter.
 
 The Lists in the beginning of the main script can be altered in order to execute various Problemsizes and set the number of GA-Iterations:
@@ -17,21 +17,7 @@ This exemplary set-up will cause that ACO and GA are executed for TSP problems w
 
 
 
-GRAPH COLOURING:
-### GA
-
-For genetic algorithms, we use different parameter settings such as:
-* population size
-* number of generations
-* mutation rate
-* tournament size (for selection of parents)
-
-Initial state is a random state.
-
-Fitness function:
-* Graph coloring: 50 * num_of_colors + 100 * num_of_conflicts
-
-## Setup and running
+### GRAPH COLOURING:
 
 This project uses python 3.7, so you need to have it installed in order
 to run the scripts.
